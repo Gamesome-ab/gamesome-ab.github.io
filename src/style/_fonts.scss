@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Share+Tech+Mono&display=swap");
+@import "screens";
+
+$mainFont: "Montserrat", sans-serif;
+$headingFont: "Share Tech Mono", monospace;
+
+%bodyFont {
+    font-family: $mainFont;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $headingFont;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 8.4rem;
+    margin: 5rem 0;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 10rem;
+        line-height: 14rem;
+    }
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 4.9rem;
+    margin: 4rem 0;
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 4.2rem;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 3.4rem;
+    font-size: 2.4rem;
+}

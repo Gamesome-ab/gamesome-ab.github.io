@@ -1,0 +1,132 @@
+@import "colors";
+@import "screens";
+@import "fonts";
+@import "header-height";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    // Makes 0.1rem be equal to 1px
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: $white;
+    color: $gray-dark;
+
+    @extend %bodyFont;
+}
+
+$footer-height: 5rem;
+
+footer {
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+}
+
+section {
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: $tablet) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    &:nth-of-type(odd) {
+        background-color: $white;
+    }
+    &:nth-of-type(even) {
+        background-color: $whiteish;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary-dark;
+        text-decoration: underline;
+    }
+
+    &.colored-bg {
+        color: $white;
+        &:hover {
+            color: $gray-light;
+            text-decoration: none;
+        }
+    }
+}
+
+p {
+    max-width: 50em;
+    margin-bottom: 2rem;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 50em;
+}
+
+.icon {
+    vertical-align: middle;
+    height: 2.4rem;
+    width: 2.4rem;
+    display: inline-block;
+    fill: currentColor;
+
+    &.small {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+    &.large {
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .column {
+        flex: 1;
+        padding: 1.5rem;
+        min-width: 25rem;
+        max-width: 50%;
+
+        @media (max-width: $phone) {
+            min-width: 100%;
+        }
+
+        .column-header {
+            display: flex;
+            align-items: center;
+
+            > svg {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

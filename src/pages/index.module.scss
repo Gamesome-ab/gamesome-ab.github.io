@@ -1,0 +1,20 @@
+@import "../style/colors";
+@import "../style/header-height";
+@import "../style/screens";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - #{$header-height});
+    color: $white;
+    background: $primary;
+
+    > img {
+        height: 20rem;
+        @media screen and (min-width: $tablet) {
+            height: 25rem;
+        }
+    }
+}

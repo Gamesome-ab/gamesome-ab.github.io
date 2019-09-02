@@ -1,0 +1,22 @@
+@import "../style/colors";
+@import "../style/header-height";
+
+header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: $header-height;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 2rem;
+    background-color: $primary;
+    box-shadow: 0 0.2rem 0.1rem 0 $gray-transparent;
+
+    nav {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
