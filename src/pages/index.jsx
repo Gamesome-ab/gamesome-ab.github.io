@@ -48,14 +48,15 @@ const IndexPage = () => {
                     joy-spreader behind a keyboard, where I'd rather code and do
                     it well.
                 </p>
+                <p>My name is Ahmad Game.</p>
             </div>
         ),
         sv: (
             <div className={style.description}>
                 <p>
                     En skånepåg som, efter att ha tillbringat delar av sin
-                    uppväxt bland mumier, och koshari, återvände och fick börja
-                    med att reparera sin malmöitiska.
+                    uppväxt bland mumier,pillerbaggar och koshari, återvände och
+                    fick börja med att reparera sin malmöitiska.
                 </p>
                 <p>
                     Besitter unika talanger så som att kunna laga risotto utan
@@ -67,11 +68,12 @@ const IndexPage = () => {
                     bitter glädjespridare bakom tangentbordet där jag numera
                     kodar hellre och bra.
                 </p>
+                <p>Mitt namn är Ahmad Game.</p>
             </div>
         ),
     };
 
-    const getDescription = viewOriginal => {
+    const getDescription = () => {
         if (viewOriginal) {
             return description["sv"];
         }
@@ -172,21 +174,10 @@ const IndexPage = () => {
                             <Img fluid={data.game.childImageSharp.fluid} />
                         </div>
                         <div className={style.column}>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    flexWrap: "wrap",
-                                    justifyContent: "space-between",
-                                }}
-                            >
-                                <span>Ahmad Game</span>
-                                <Switch
-                                    label="Original"
-                                    onChange={checked =>
-                                        setViewOriginal(checked)
-                                    }
-                                />
-                            </div>
+                            <Switch
+                                label="Original"
+                                onChange={checked => setViewOriginal(checked)}
+                            />
                             {getDescription(viewOriginal)}
                         </div>
                     </div>
