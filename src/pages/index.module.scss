@@ -45,6 +45,14 @@
     }
 }
 
+.logo-column {
+    @media (max-width: $phone) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .description {
     min-height: 46rem;
 }

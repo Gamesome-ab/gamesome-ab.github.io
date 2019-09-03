@@ -87,7 +87,7 @@ const IndexPage = () => {
                 <div className="container">
                     <h2 style={{ textAlign: "center" }}>What is Gamesome?</h2>
                     <div className={style.row}>
-                        <div className={style.column}>
+                        <div className={`${style.column} ${style.logoColumn}`}>
                             <img
                                 width="250"
                                 src={InvertedLogo}

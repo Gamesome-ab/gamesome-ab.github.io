@@ -15,31 +15,36 @@ const TechLogos = () => {
     return (
         <div className={style.grid}>
             <Link to="https://reactjs.org/">
-                <img src={ReactLogo} alt="react" />
+                <img width="100" height="100" src={ReactLogo} alt="react" />
             </Link>
             <Link to="https://developer.mozilla.org/en-US/docs/Web/Web_Components">
-                <img src={WebComponentsLogo} alt="Web Components" />
+                <img
+                    width="100"
+                    height="100"
+                    src={WebComponentsLogo}
+                    alt="Web Components"
+                />
             </Link>
             <Link to="https://graphql.org/">
-                <img src={GraphQl} alt="Graph QL" />
+                <img width="100" height="100" src={GraphQl} alt="Graph QL" />
             </Link>
             <Link to="https://github.com/dotnet/core">
-                <img src={NetCore} alt=".Net core" />
+                <img width="100" height="100" src={NetCore} alt=".Net core" />
             </Link>
             <Link to="https://python.org/">
-                <img src={PythonLogo} alt="Python" />
+                <img width="100" height="100" src={PythonLogo} alt="Python" />
             </Link>
             <Link to="https://www.postgresql.org/">
-                <img src={Psql} alt="PostgreSQL" />
+                <img width="100" height="100" src={Psql} alt="PostgreSQL" />
             </Link>
             <Link to="https://www.elastic.co/">
-                <img src={Elastic} alt="Elastic" />
+                <img width="100" height="100" src={Elastic} alt="Elastic" />
             </Link>
             <Link to="https://www.docker.com/">
-                <img src={Docker} alt="Docker" />
+                <img width="100" height="100" src={Docker} alt="Docker" />
             </Link>
             <Link to="https://aws.amazon.com/">
-                <img src={Aws} alt="AWS" />
+                <img width="100" height="100" src={Aws} alt="AWS" />
             </Link>
         </div>
     );
