@@ -46,10 +46,10 @@ section {
         padding-right: 5rem;
     }
     &:nth-of-type(odd) {
-        background-color: $white;
+        background-color: $whiteish;
     }
     &:nth-of-type(even) {
-        background-color: $whiteish;
+        background-color: $white;
     }
 }
 
@@ -74,7 +74,7 @@ a {
 
 p {
     max-width: 50em;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .container {
@@ -98,35 +98,5 @@ p {
     &.large {
         height: 3.2rem;
         width: 3.2rem;
-    }
-}
-
-.text-center {
-    text-align: center;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .column {
-        flex: 1;
-        padding: 1.5rem;
-        min-width: 25rem;
-        max-width: 50%;
-
-        @media (max-width: $phone) {
-            min-width: 100%;
-        }
-
-        .column-header {
-            display: flex;
-            align-items: center;
-
-            > svg {
-                margin-right: 1rem;
-            }
-        }
     }
 }

@@ -1,0 +1,13 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > a {
+        display: flex;
+        > img {
+            width: 10rem;
+            margin: 1rem;
+        }
+    }
+}

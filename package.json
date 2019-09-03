@@ -1,7 +1,6 @@
 {
   "name": "gamesome.io",
   "private": true,
-  "description": "Ahmad Game personal website.",
   "version": "0.1.0",
   "author": {
     "name": "Ahmad Game",
@@ -9,11 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gamesome-ab.github.io.git"
+    "url": "https://github.com/gamesome-ab/gamesome-ab.github.io.git"
   },
   "homepage": "https://gamesome.io",
   "dependencies": {
-    "gatsby": "^2.15.2",
+    "@material/switch": "^3.1.0",
+    "gatsby": "^2.15.4",
     "gatsby-image": "^2.2.16",
     "gatsby-plugin-google-analytics": "^2.1.13",
     "gatsby-plugin-manifest": "^2.2.13",
@@ -27,10 +27,10 @@
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.7.0"
+    "react-icons": "^3.7.0",
+    "smooth-scroll": "^16.1.0"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",

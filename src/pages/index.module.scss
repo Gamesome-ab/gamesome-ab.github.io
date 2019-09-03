@@ -18,3 +18,33 @@
         }
     }
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .column {
+        flex: 1;
+        padding: 1.5rem;
+        min-width: 25rem;
+        max-width: 50%;
+
+        @media (max-width: $phone) {
+            min-width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+
+            > svg {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+.description {
+    min-height: 46rem;
+}

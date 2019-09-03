@@ -1,20 +1,19 @@
 import React from "react";
-
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from ".";
 import "./header.module.scss";
 
 const Header = () => (
     <header>
         <nav>
-            <AnchorLink className="colored-bg" href="#what">
+            <Link className="colored-bg" to="/#what">
                 <h4>What</h4>
-            </AnchorLink>
-            <AnchorLink className="colored-bg" href="#why">
+            </Link>
+            <Link className="colored-bg" to="/#why">
                 <h4>Why</h4>
-            </AnchorLink>
-            <AnchorLink className="colored-bg" href="#who">
+            </Link>
+            <Link className="colored-bg" to="/#who">
                 <h4>Who</h4>
-            </AnchorLink>
+            </Link>
         </nav>
     </header>
 );
