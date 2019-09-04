@@ -6,7 +6,8 @@ import { Layout, SEO, Link, TechLogos, Switch } from "../components";
 
 import Logo from "../images/gamesome.svg";
 import InvertedLogo from "../images/gamesome-inverted.svg";
-import { MdMultilineChart, MdCode, MdSchool } from "react-icons/md";
+import { MdShowChart, MdCode, MdMergeType } from "react-icons/md";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import style from "./index.module.scss";
 
@@ -23,7 +24,7 @@ const IndexPage = () => {
             game: file(relativePath: { eq: "Game.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400, quality: 100) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_tracedSVG
                     }
                 }
             }
@@ -34,19 +35,20 @@ const IndexPage = () => {
         en: (
             <div className={style.description}>
                 <p>
-                    A Scania lad, who, after spending parts of his upbringing
-                    among mummies, scarabs and koshari, returned and had to
-                    start repairing Malmö dialect.
+                    <FaQuoteLeft className="small" />A Scania lad, who, after
+                    spending parts of his upbringing among mummies, scarabs and
+                    koshari, returned and had to start repairing Malmö dialect.
                 </p>
                 <p>
-                    I possess unique talents such as being able to cook risotto
+                    Possesses unique talents such as being able to cook risotto
                     without rice and was once the biggest basket ball talent
                     north of Värnhem.
                 </p>
                 <p>
-                    After an astonishing flight, however, I landed as bitter
-                    joy-spreader behind a keyboard, where I'd rather code and do
-                    it well.
+                    After a dramatic flight, however, He landed as bitter
+                    joy-spreader behind a keyboard, where he'd rather code and
+                    do it well.
+                    <FaQuoteRight className="small" />
                 </p>
                 <p>My name is Ahmad Game.</p>
             </div>
@@ -54,9 +56,10 @@ const IndexPage = () => {
         sv: (
             <div className={style.description}>
                 <p>
+                    <FaQuoteLeft className="small" />
                     En skånepåg som, efter att ha tillbringat delar av sin
-                    uppväxt bland mumier,pillerbaggar och koshari, återvände och
-                    fick börja med att reparera sin malmöitiska.
+                    uppväxt bland mumier, pillerbaggar och koshari, återvände
+                    och fick börja med att reparera sin malmöitiska.
                 </p>
                 <p>
                     Besitter unika talanger så som att kunna laga risotto utan
@@ -64,9 +67,10 @@ const IndexPage = () => {
                     värnhem.
                 </p>
                 <p>
-                    Efter en häpnadsväckande flygresa landade jag emellertid som
-                    bitter glädjespridare bakom tangentbordet där jag numera
-                    kodar hellre och bra.
+                    Efter en dramatisk flygresa landade han som bitter
+                    glädjespridare bakom tangentbordet där han numera kodar
+                    hellre och bra.
+                    <FaQuoteRight className="small" />
                 </p>
                 <p>Mitt namn är Ahmad Game.</p>
             </div>
@@ -121,42 +125,43 @@ const IndexPage = () => {
             </section>
             <section id="why">
                 <div className="container">
-                    <h2 style={{ textAlign: "center" }}>How I can help</h2>
+                    <h2 style={{ textAlign: "center" }}>
+                        How Gamesome can help
+                    </h2>
                     <div className={style.row}>
                         <div className={style.column}>
                             <div className={style.header}>
                                 <MdCode className="color-primary" />
-                                <h4>Developer</h4>
+                                <h4>Development</h4>
                             </div>
                             <p>
-                                I am first and foremost a developer. For me,
-                                software development is about solving problems
-                                in a creative way, which is awesome!
+                                Software development and building products is
+                                our core business. We think software is about
+                                solving real problems in a creative and
+                                practical way.
                             </p>
                             <div className={style.header}>
-                                <MdMultilineChart className="color-primary" />
-                                <h4>Product Manager</h4>
+                                <MdShowChart className="color-primary" />
+                                <h4>Product Management</h4>
                             </div>
                             <p>
-                                We shouldn't forget that the end goal of all
-                                software is to solve human problems. The user
-                                perspective and the business side of software
-                                development is something that I find
-                                interesting.
+                                The end goal of all software is to solve human
+                                problems. The user perspective and the business
+                                side of software development is something we
+                                have experience with.
                             </p>
                             <div className={style.header}>
-                                <MdSchool className="color-primary" />
-                                <h4>Teacher</h4>
+                                <MdMergeType className="color-primary" />
+                                <h4>Coaching</h4>
                             </div>
                             <p>
-                                I've been often described as a good teacher.
-                                Which is quite useful when trying to explain
-                                software and getting different people to work
-                                together.
+                                Software is built by people. Getting people to
+                                work together in synergy towards a common goal
+                                is both productive and rewarding.
                             </p>
                             <p>
                                 <Link to="https://ahmadgame.com/experience/">
-                                    Read more about my experience...
+                                    Read more...
                                 </Link>
                             </p>
                         </div>
@@ -168,7 +173,9 @@ const IndexPage = () => {
             </section>
             <section id="who">
                 <div className="container">
-                    <h2 style={{ textAlign: "center" }}>Who I am</h2>
+                    <h2 style={{ textAlign: "center" }}>
+                        Who is behind Gamesome
+                    </h2>
                     <div className={style.row}>
                         <div className={style.column}>
                             <Img fluid={data.game.childImageSharp.fluid} />
