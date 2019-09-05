@@ -23,11 +23,9 @@ body {
     @extend %bodyFont;
 }
 
-$footer-height: 5rem;
-
 footer {
     bottom: 0;
-    height: 5rem;
+    height: $headerHeight;
     width: 100%;
     padding: 0 2rem;
     display: flex;
