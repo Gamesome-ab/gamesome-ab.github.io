@@ -19,8 +19,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Ahmad Game`,
-                short_name: `Game`,
+                name: `Gamesome`,
+                short_name: `Gamesome`,
                 start_url: `/`,
                 background_color: `#f5f5f5`,
                 theme_color: `#DD2D5A`,
