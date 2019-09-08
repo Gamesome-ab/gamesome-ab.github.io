@@ -11,9 +11,18 @@ const CookiesConsent = () => {
     const [visible, setVisible] = useState(false);
 
     function handleScroll() {
+        const contentHeight =
+            document.documentElement.clientHeight ||
+            document.body.clientHeight ||
+            window.innerHeight;
         // Hide when the header reaches the top.
-        const whenTohide = document.documentElement.clientHeight - headerHeight;
-        if (document.documentElement.scrollTop >= whenTohide) {
+        const whenTohide = contentHeight - headerHeight;
+        const scrollTop = Math.max(
+            window.pageYOffset,
+            document.documentElement.scrollTop,
+            document.body.scrollTop
+        );
+        if (scrollTop >= whenTohide) {
             setVisible(false);
         }
     }
