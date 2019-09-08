@@ -10,7 +10,7 @@ const debug = false;
 const CookiesConsent = () => {
     const [visible, setVisible] = useState(false);
 
-    function handleScroll() {
+    const handleScroll = () => {
         const contentHeight =
             document.documentElement.clientHeight ||
             document.body.clientHeight ||
@@ -25,9 +25,9 @@ const CookiesConsent = () => {
         if (scrollTop >= whenTohide) {
             setVisible(false);
         }
-    }
+    };
 
-    function accept() {
+    const accept = () => {
         // remove listener if set
         window.removeEventListener("scroll", handleScroll);
 
@@ -35,7 +35,7 @@ const CookiesConsent = () => {
             expires: 150, //days
         });
         setVisible(false);
-    }
+    };
 
     useEffect(() => {
         // if cookie undefined or debug
@@ -69,19 +69,15 @@ const CookiesConsent = () => {
 function hasDoNotTrack() {
     const doNotTrack =
         // The browser supports Do Not Track!
-        (window.doNotTrack ||
-            navigator.doNotTrack ||
-            navigator.msDoNotTrack ||
-            "msTrackingProtectionEnabled" in window.external) &&
+        (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack) &&
         // Do Not Track is enabled!
         (window.doNotTrack === "1" ||
             navigator.doNotTrack === "yes" ||
             navigator.doNotTrack === "1" ||
-            navigator.msDoNotTrack === "1" ||
-            window.external.msTrackingProtectionEnabled());
+            navigator.msDoNotTrack === "1");
 
     if (doNotTrack) {
-        console.log("Do not track detected. I will repect that :)");
+        console.log("Do not track detected. We won't track anything!");
     }
     return doNotTrack;
 }

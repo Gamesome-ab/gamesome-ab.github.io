@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Gamesome`,
-        description: `Gamesome company website`,
+        description: `Gamesome AB is a software company. We offer consultant services and our own products.`,
         author: "@ahmadgame",
         siteUrl: "https://gamesome.io",
     },
