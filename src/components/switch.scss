@@ -1,6 +1,0 @@
-@import "@material/switch/mdc-switch.scss";
-@import "../style/colors";
-
-.switch {
-    @include mdc-switch-toggled-on-color($primary);
-}

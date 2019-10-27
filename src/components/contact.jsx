@@ -18,7 +18,10 @@ const Contact = () => (
         <Link className="colored-bg" to="mailto:game@gamesome.io">
             <MdEmail />
         </Link>
-        <Link className="colored-bg" to="https://www.linkedin.com/in/gamesome">
+        <Link
+            className="colored-bg"
+            to="https://www.linkedin.com/company/gamesome"
+        >
             <FaLinkedinIn />
         </Link>
     </div>
