@@ -1,5 +1,5 @@
 @import "../style/colors";
-@import "../style/header-height";
+@import "../style/header-footer";
 @import "../style/screens";
 
 .hero {
@@ -59,13 +59,13 @@
         &:first-child {
             > svg {
                 margin-right: 1em;
-                color: $gray;
+                color: $grey;
             }
         }
         &:nth-last-child(2) {
             > svg {
                 margin-left: 1em;
-                color: $gray;
+                color: $grey;
             }
         }
     }

@@ -10,7 +10,7 @@ const Switch = ({ label, onChange }) => {
             onChange(event.target.checked);
         };
 
-        const s = document.querySelector("#descSwitch");
+        const s = document.querySelector("#mySwitch");
         s.addEventListener("change", handleChange);
 
         return () => {
@@ -20,8 +20,8 @@ const Switch = ({ label, onChange }) => {
 
     return (
         <div className={style.switch}>
-            <mwc-switch id="descSwitch"></mwc-switch>
-            <label for="descSwitch">{label}</label>
+            <mwc-switch id="mySwitch"></mwc-switch>
+            <label htmlFor="mySwitch">{label}</label>
         </div>
     );
 };

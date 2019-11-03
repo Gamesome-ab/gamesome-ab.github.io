@@ -12,6 +12,7 @@
   },
   "homepage": "https://gamesome.io",
   "dependencies": {
+    "@material/mwc-button": "^0.10.0",
     "@material/mwc-switch": "^0.10.0",
     "gatsby": "^2.15.4",
     "gatsby-image": "^2.2.16",

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from ".";
-import "./header.module.scss";
 
 const Header = () => (
     <header>

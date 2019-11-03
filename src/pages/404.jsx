@@ -19,7 +19,7 @@ const NotFoundPage = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    height: "100vh",
+                    minHeight: "100vh",
                 }}
             >
                 <h1 style={{ textAlign: "center" }}>
@@ -31,6 +31,7 @@ const NotFoundPage = () => {
                     Hopefully this gif can cheer you up.
                 </p>
                 <img
+                style={{marginBottom: "5rem"}}
                     src={data.gif.publicURL}
                     alt="cat shaq wiggle"
                     width="400"

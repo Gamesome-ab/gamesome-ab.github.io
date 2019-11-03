@@ -1,0 +1,7 @@
+$headerHeight: 7rem;
+$footerHeight: $headerHeight;
+
+:export {
+    headerHeight: $headerHeight;
+    footerHeight: $footerHeight;
+}

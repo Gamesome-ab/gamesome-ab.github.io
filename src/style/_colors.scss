@@ -2,23 +2,24 @@
 $white: #fff;
 $whiteish: #f5f5f5;
 
-$gray: #777;
-$gray-light: #ddd; // for text on dark background
-$gray-dark: #404040; // for text on light background
-$gray-transparent: rgba(0, 0, 0, 0.1); // for boxshadow
+$grey: #777;
+$grey-light: #ddd; // for text on dark background
+$grey-dark: #404040; // for text on light background
+$grey-transparent: rgba(0, 0, 0, 0.1); // for boxshadow
 
 $primary: #dd2d5a;
 $primary-dark: #a50031;
 $primary-light: #ff6787;
 
-$secondary: #3d3d3d;
-$secondary-dark: #1e1e1e;
-$secondary-light: #676767;
+$yellowish: #F3A712;
 
 .color-primary {
     color: $primary;
 }
 
-.color-secondary {
-    color: $secondary;
-}
+:export {
+    white: $white;
+    primary: $primary;
+    darkGrey: $grey-dark;
+    yellowish: $yellowish;
+  }
