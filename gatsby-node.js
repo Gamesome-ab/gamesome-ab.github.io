@@ -7,6 +7,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                         test: /mwc-switch.js/,
                         use: loaders.null(),
                     },
+                    {
+                        test: /mwc-button.js/,
+                        use: loaders.null()
+                    }
                 ],
             },
         });
