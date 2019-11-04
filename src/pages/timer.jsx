@@ -10,12 +10,8 @@ const SWE = "sv-SE";
 const HOOK_URL =
     "https://wh.automate.io/webhook/5dbf53573787e5653ead6750";
 
-function start() {
-    window.localStorage.setItem("start", new Date().toLocaleTimeString(SWE));
-}
-
-function lunch() {
-    window.localStorage.setItem("lunch", new Date().toLocaleTimeString(SWE));
+function setTimeStamp(key) {
+    window.localStorage.setItem(key, new Date().toLocaleTimeString(SWE));
 }
 
 async function home() {
@@ -23,6 +19,7 @@ async function home() {
         date: new Date().toLocaleDateString(SWE),
         start: window.localStorage.getItem("start"),
         lunch: window.localStorage.getItem("lunch"),
+        afternoon: window.localStorage.getItem("afternoon"),
         home: new Date().toLocaleTimeString(SWE),
     };
     const response = await fetch(HOOK_URL, {
@@ -49,16 +46,24 @@ const Timer = () => {
         }
         const lunchTime = window.localStorage.getItem("lunch");
         if (lunchTime) {
+            setButtonToShow("afternoon");
+        }
+        const afternoonTime = window.localStorage.getItem("afternoon");
+        if (afternoonTime) {
             setButtonToShow("home");
         }
     }
 
     const handleStart = () => {
-        start();
+        setTimeStamp("start");
         setButtonToShow("lunch");
     }
     const handleLunch = () => {
-        lunch();
+        setTimeStamp("lunch");
+        setButtonToShow("afternoon");
+    };
+    const handleAfternoon = () => {
+        setTimeStamp("afternoon");
         setButtonToShow("home");
     };
     const handleHome = async () => {
@@ -69,9 +74,12 @@ const Timer = () => {
     useEffect(() => {
         const startButton = document.querySelector("#start");
         const lunchButton = document.querySelector("#lunch");
+        const afternoonButton = document.querySelector("#afternoon");
         const homeButton = document.querySelector("#home");
+
         startButton.addEventListener("click", handleStart);
         lunchButton.addEventListener("click", handleLunch);
+        afternoonButton.addEventListener("click", handleAfternoon);
         homeButton.addEventListener("click", handleHome);
 
         showTheRightButtonOnRefresh();
@@ -79,6 +87,7 @@ const Timer = () => {
         return () => {
             startButton.removeEventListener("click", handleStart);
             lunchButton.removeEventListener("click", handleLunch);
+            afternoonButton.removeEventListener("click", handleAfternoon);
             homeButton.removeEventListener("click", handleHome);
         };
     }, []);
@@ -101,7 +110,7 @@ const Timer = () => {
                     id="start"
                     style={{
                         display: buttonToShow === "start" ? "block" : "none",
-                        "--mdc-theme-primary": colors.primary,
+                        "--mdc-theme-primary": colors.greenish,
                     }}
                     label="Start the day"
                     raised
@@ -116,6 +125,16 @@ const Timer = () => {
                     label="Going for lunch?"
                     raised
                     icon="fastfood"
+                ></mwc-button>
+                <mwc-button
+                    id="afternoon"
+                    style={{
+                        display: buttonToShow === "afternoon" ? "block" : "none",
+                        "--mdc-theme-primary": colors.bluish,
+                    }}
+                    label="Back to work!"
+                    raised
+                    icon="build"
                 ></mwc-button>
                 <mwc-button
                     id="home"

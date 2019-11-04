@@ -12,6 +12,8 @@ $primary-dark: #a50031;
 $primary-light: #ff6787;
 
 $yellowish: #F3A712;
+$greenish: #83B692;
+$bluish: #0079cc;
 
 .color-primary {
     color: $primary;
@@ -22,4 +24,6 @@ $yellowish: #F3A712;
     primary: $primary;
     darkGrey: $grey-dark;
     yellowish: $yellowish;
+    greenish: $greenish;
+    bluish: $bluish;
   }
