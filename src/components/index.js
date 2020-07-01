@@ -8,13 +8,13 @@ import Switch from "./switch";
 import CookiesConsent from "./cookies-consent";
 
 export {
-    Header,
-    Layout,
-    SEO,
-    Link,
-    ListLink,
-    Contact,
-    TechLogos,
-    Switch,
-    CookiesConsent,
+  Header,
+  Layout,
+  SEO,
+  Link,
+  ListLink,
+  Contact,
+  TechLogos,
+  Switch,
+  CookiesConsent,
 };

@@ -11,19 +11,19 @@ $primary: #dd2d5a;
 $primary-dark: #a50031;
 $primary-light: #ff6787;
 
-$yellowish: #F3A712;
-$greenish: #83B692;
+$yellowish: #f3a712;
+$greenish: #83b692;
 $bluish: #0079cc;
 
 .color-primary {
-    color: $primary;
+  color: $primary;
 }
 
 :export {
-    white: $white;
-    primary: $primary;
-    darkGrey: $grey-dark;
-    yellowish: $yellowish;
-    greenish: $greenish;
-    bluish: $bluish;
-  }
+  white: $white;
+  primary: $primary;
+  darkGrey: $grey-dark;
+  yellowish: $yellowish;
+  greenish: $greenish;
+  bluish: $bluish;
+}

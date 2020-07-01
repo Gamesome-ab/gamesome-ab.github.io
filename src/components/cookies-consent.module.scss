@@ -1,33 +1,33 @@
 @import "../style/colors";
 
 .cookie-consent {
-    position: fixed;
-    z-index: 999;
-    background: $white;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
+  position: fixed;
+  z-index: 999;
+  background: $white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
 
-    > button {
-        border: 0.1rem solid $primary;
-        color: $primary;
-        padding: 1rem;
-        margin-left: 1rem;
-        border-radius: 0.2rem;
-        background: transparent;
-        cursor: pointer;
-        outline: none;
+  > button {
+    border: 0.1rem solid $primary;
+    color: $primary;
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
 
-        &:hover {
-            color: $white;
-            background: $primary;
-        }
-        &:active {
-            color: $white;
-            background: $primary-dark;
-            border-color: $primary-dark;
-        }
+    &:hover {
+      color: $white;
+      background: $primary;
     }
+    &:active {
+      color: $white;
+      background: $primary-dark;
+      border-color: $primary-dark;
+    }
+  }
 }
