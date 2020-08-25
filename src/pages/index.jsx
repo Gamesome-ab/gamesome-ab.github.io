@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-
-import Img from "gatsby-image";
-import { Layout, SEO, Link, TechLogos, Switch } from "../components";
+import React from "react";
+import { Layout, SEO, Link, TechLogos } from "../components";
 
 import Logo from "../images/gamesome.svg";
 import InvertedLogo from "../images/gamesome-inverted.svg";
 import { MdShowChart, MdCode, MdMergeType } from "react-icons/md";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import style from "./index.module.scss";
 
@@ -19,75 +15,10 @@ const hero = (
 );
 
 const IndexPage = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            game: file(relativePath: { eq: "Game.png" }) {
-                childImageSharp {
-                    fluid(maxWidth: 400, quality: 100) {
-                        ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                }
-            }
-        }
-    `);
-    const [viewOriginal, setViewOriginal] = useState(false);
-    const description = {
-        en: (
-            <div className={style.description}>
-                <p>
-                    <FaQuoteLeft className="small" />A Scania lad, who, after
-                    spending parts of his upbringing among mummies, scarabs and
-                    koshari, returned and had to start repairing Malmö dialect.
-                </p>
-                <p>
-                    Possesses unique talents such as being able to cook risotto
-                    without rice and was once the biggest basket ball talent
-                    north of Värnhem.
-                </p>
-                <p>
-                    After a dramatic flight, however, He landed as bitter
-                    joy-spreader behind a keyboard, where he'd rather code and
-                    do it well.
-                    <FaQuoteRight className="small" />
-                </p>
-                <p>My name is Ahmad Game.</p>
-            </div>
-        ),
-        sv: (
-            <div className={style.description}>
-                <p>
-                    <FaQuoteLeft className="small" />
-                    En skånepåg som, efter att ha tillbringat delar av sin
-                    uppväxt bland mumier, pillerbaggar och koshari, återvände
-                    och fick börja med att reparera sin malmöitiska.
-                </p>
-                <p>
-                    Besitter unika talanger så som att kunna laga risotto utan
-                    ris och var en gång den största baskettalangen norr om
-                    värnhem.
-                </p>
-                <p>
-                    Efter en dramatisk flygresa landade han som bitter
-                    glädjespridare bakom tangentbordet där han numera kodar
-                    hellre och bra.
-                    <FaQuoteRight className="small" />
-                </p>
-                <p>Mitt namn är Ahmad Game.</p>
-            </div>
-        ),
-    };
-
-    const getDescription = () => {
-        if (viewOriginal) {
-            return description["sv"];
-        }
-        return description["en"];
-    };
-
     return (
         <Layout hero={hero}>
             <SEO />
-            <section id="what">
+            <section id="about">
                 <div className="container">
                     <h2 style={{ textAlign: "center" }}>What is Gamesome?</h2>
                     <div className={style.row}>
@@ -122,7 +53,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </section>
-            <section id="why">
+            <section id="services">
                 <div className="container">
                     <h2 style={{ textAlign: "center" }}>
                         How Gamesome can help
@@ -170,22 +101,76 @@ const IndexPage = () => {
                     </div>
                 </div>
             </section>
-            <section id="who">
+            <section id="projects">
                 <div className="container">
-                    <h2 style={{ textAlign: "center" }}>
-                        Who is behind Gamesome
-                    </h2>
-                    <div className={style.row}>
-                        <div className={style.column}>
-                            <Img fluid={data.game.childImageSharp.fluid} />
-                        </div>
-                        <div className={style.column}>
-                            <Switch
-                                label="Original"
-                                onChange={(checked) => setViewOriginal(checked)}
-                            />
-                            {getDescription(viewOriginal)}
-                        </div>
+                    <h2 style={{ textAlign: "center" }}>Projects</h2>
+                    <div className={style.project}>
+                        <h4>E-Space Survey Manager</h4>
+                        <p>
+                            E-Space is a company that offers online surveys for
+                            their customers to engage with users in order to
+                            improve their websites, products and services.
+                            E-Space helps their customers to design engaging
+                            surveys, analyze the responses, present aggregated
+                            results and suggest improvements. They use a
+                            proprietary tool called “Survey Manager” to publish
+                            surveys, collect and analyse responses.
+                        </p>
+                        <p>
+                            In order to scale their business they wanted to make
+                            the Survey Manager available for customers to
+                            publish their own surveys and get an overview of the
+                            response data. Additionally they wanted to help
+                            their customers make sense of the data and find
+                            insights into their users behaviours. E-Space then
+                            relied on their own expertise to provide deeper
+                            analysis and suggest improvements.
+                        </p>
+                        <p>
+                            E-Space reached out to us in order to help them with
+                            this transformation and it was quite an interesting
+                            assignment, where we had to use our entire toolkit
+                            from development, through UX design and product
+                            management.
+                        </p>
+                        <p>
+                            Firstly, the Survey Manager had to be visually and
+                            functionally redesigned to cater to both the expert
+                            analysts at E-Space, and newer less experienced
+                            users.
+                        </p>
+                        <p>
+                            Secondly, we needed to automate and simplify some
+                            workflows performed by the analysts that the new
+                            users expected to be able to do themselves.
+                        </p>
+                        <p>
+                            Finally, we had to rework pricing and marketing
+                            strategies where license fees and expert services
+                            should complement each other to provide a good
+                            customer experience.
+                        </p>
+                    </div>
+                    <div className={style.project}>
+                        <h4>Bathroom Finder</h4>
+                        <p>
+                            Bathroom Finder is a community driven app that helps
+                            new parents find a good place to change a diaper. It
+                            is completely free and available for{" "}
+                            <Link to="https://apps.apple.com/us/app/id1518954012">
+                                iOS
+                            </Link>{" "}
+                            and{" "}
+                            <Link to="https://play.google.com/store/apps/details?id=io.gamesome.bathroom_finder">
+                                Android
+                            </Link>
+                            .
+                        </p>
+                        <p>
+                            Building this app solved a real life problem and
+                            provided a learning experience of developing and
+                            releasing a cross platform app built with flutter.
+                        </p>
                     </div>
                 </div>
             </section>

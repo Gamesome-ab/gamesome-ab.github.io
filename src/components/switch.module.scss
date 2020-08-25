@@ -1,8 +1,0 @@
-@import "../style/colors";
-
-.switch {
-    > mwc-switch {
-      --mdc-theme-secondary: #{$primary};
-      margin-right: 1rem;
-  }
-}

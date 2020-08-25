@@ -53,20 +53,7 @@
     }
 }
 
-.description {
-    min-height: 46rem;
-    > p {
-        &:first-child {
-            > svg {
-                margin-right: 1em;
-                color: $grey;
-            }
-        }
-        &:nth-last-child(2) {
-            > svg {
-                margin-left: 1em;
-                color: $grey;
-            }
-        }
-    }
+.project {
+    margin-bottom: 10rem;
 }
+
