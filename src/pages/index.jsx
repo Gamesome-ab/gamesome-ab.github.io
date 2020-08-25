@@ -106,17 +106,16 @@ const IndexPage = () => {
                             </p>
                             <p>
                                 The plan is to work in cycles alternating
-                                between consulting and developing my own product
-                                ideas.
+                                between consulting and trying out product ideas.
                             </p>
                             <p>
                                 The consultant cycles will finance the product
                                 cycles and provide an environment of validating
-                                my product ideas.
+                                these ideas.
                             </p>
                             <p>
-                                The product cycles will give me experience that
-                                I can use to help customers build better
+                                The product cycles will give us experience that
+                                we can use to help customers build better
                                 products.
                             </p>
                         </div>
@@ -183,7 +182,7 @@ const IndexPage = () => {
                         <div className={style.column}>
                             <Switch
                                 label="Original"
-                                onChange={checked => setViewOriginal(checked)}
+                                onChange={(checked) => setViewOriginal(checked)}
                             />
                             {getDescription(viewOriginal)}
                         </div>
