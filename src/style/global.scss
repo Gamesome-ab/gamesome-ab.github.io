@@ -4,118 +4,117 @@
 @import "header-footer";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    // Makes 0.1rem be equal to 1px
-    font-size: 10px;
+  // Makes 0.1rem be equal to 1px
+  font-size: 10px;
 }
 
 body {
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: $white;
-    color: $grey-dark;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: $white;
+  color: $grey-dark;
 
-    @extend %bodyFont;
+  @extend %bodyFont;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    height: $headerHeight;
-    width: 100%;
-    z-index: 1000;
-    padding: 0 2rem;
-    background-color: $primary;
-    box-shadow: 0 0.2rem 0.1rem 0 $grey-transparent;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: $headerHeight;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 2rem;
+  background-color: $primary;
+  box-shadow: 0 0.2rem 0.1rem 0 $grey-transparent;
 
-    nav {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+  nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
-
 footer {
-    bottom: 0;
-    height: $footerHeight;
-    width: 100%;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    background-color: $primary;
+  bottom: 0;
+  height: $footerHeight;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: $primary;
 }
 
 section {
-    padding-bottom: 10rem;
-    padding-top: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding-bottom: 10rem;
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-    @media (min-width: $tablet) {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    &:nth-of-type(odd) {
-        background-color: $whiteish;
-    }
-    &:nth-of-type(even) {
-        background-color: $white;
-    }
+  @media (min-width: $tablet) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  &:nth-of-type(odd) {
+    background-color: $whiteish;
+  }
+  &:nth-of-type(even) {
+    background-color: $white;
+  }
 }
 
 a {
-    text-decoration: none;
-    color: $primary;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: $primary;
+  transition: color 0.3s ease;
 
+  &:hover {
+    color: $primary-dark;
+    text-decoration: underline;
+  }
+
+  &.colored-bg {
+    color: $white;
     &:hover {
-        color: $primary-dark;
-        text-decoration: underline;
+      color: $grey-light;
+      text-decoration: none;
     }
-
-    &.colored-bg {
-        color: $white;
-        &:hover {
-            color: $grey-light;
-            text-decoration: none;
-        }
-    }
+  }
 }
 
 p {
-    max-width: 50em;
-    margin-bottom: 3rem;
+  max-width: 50em;
+  margin-bottom: 3rem;
 }
 
 .container {
-    margin: auto;
-    width: 100%;
-    max-width: 50em;
+  margin: auto;
+  width: 100%;
+  max-width: 50em;
 }
 
 .icon {
-    vertical-align: middle;
-    height: 2.4rem;
-    width: 2.4rem;
-    display: inline-block;
-    fill: currentColor;
+  vertical-align: middle;
+  height: 2.4rem;
+  width: 2.4rem;
+  display: inline-block;
+  fill: currentColor;
 
-    &.small {
-        height: 1.6rem;
-        width: 1.6rem;
-    }
+  &.small {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
 
-    &.large {
-        height: 3.2rem;
-        width: 3.2rem;
-    }
+  &.large {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
 }

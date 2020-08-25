@@ -8,10 +8,10 @@ import { MdShowChart, MdCode, MdMergeType } from "react-icons/md";
 import style from "./index.module.scss";
 
 const hero = (
-    <div className={style.hero}>
-        <img src={Logo} alt="Gamesome Logo"></img>
-        <h1>Gamesome</h1>
-    </div>
+  <div className={style.hero}>
+    <img src={Logo} alt="Gamesome Logo"></img>
+    <h1>Gamesome</h1>
+  </div>
 );
 
 const IndexPage = () => {

@@ -1,12 +1,12 @@
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    > a {
-        display: flex;
-        > img {
-            margin: 1rem;
-        }
+  > a {
+    display: flex;
+    > img {
+      margin: 1rem;
     }
+  }
 }

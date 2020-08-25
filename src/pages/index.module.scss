@@ -3,54 +3,54 @@
 @import "../style/screens";
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - #{$headerHeight});
-    color: $white;
-    background: $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - #{$headerHeight});
+  color: $white;
+  background: $primary;
 
-    > img {
-        height: 20rem;
-        @media screen and (min-width: $tablet) {
-            height: 25rem;
-        }
+  > img {
+    height: 20rem;
+    @media screen and (min-width: $tablet) {
+      height: 25rem;
     }
+  }
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    .column {
-        flex: 1;
-        padding: 1.5rem;
-        min-width: 25rem;
-        max-width: 50%;
+  .column {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 25rem;
+    max-width: 50%;
 
-        @media (max-width: $phone) {
-            min-width: 100%;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-
-            > svg {
-                margin-right: 1rem;
-            }
-        }
+    @media (max-width: $phone) {
+      min-width: 100%;
     }
+
+    .header {
+      display: flex;
+      align-items: center;
+
+      > svg {
+        margin-right: 1rem;
+      }
+    }
+  }
 }
 
 .logo-column {
-    @media (max-width: $phone) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  @media (max-width: $phone) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .project {
