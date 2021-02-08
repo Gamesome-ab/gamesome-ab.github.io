@@ -1,8 +1,8 @@
 import React from "react";
 import { Layout, SEO, Link, TechLogos } from "../components";
 
-import Logo from "../images/gamesome.svg";
-import InvertedLogo from "../images/gamesome-inverted.svg";
+import Logo from "../images/Gamesome.svg";
+import InvertedLogo from "../images/Gamesome-inverted.svg";
 import { MdShowChart, MdCode, MdMergeType } from "react-icons/md";
 
 import style from "./index.module.scss";

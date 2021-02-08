@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#f5f5f5`,
         theme_color: `#DD2D5A`,
         display: `minimal-ui`,
-        icon: `src/images/gamesome-inverted.svg`, // This path is relative to the root of the site.
+        icon: `src/images/Gamesome-inverted.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`, // needs to be after manifest.
